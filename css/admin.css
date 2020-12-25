@@ -1,0 +1,207 @@
+:root{	
+
+    /*Admin colors*/
+    --managementColor: #4854a2;
+    --developerColor: #3adcbc;
+    --staffAdminColor: #7814ff;
+    --serverAdminColor: #d13535;
+    --helperColor: #54cf4b;
+}
+
+.administrative-team {
+    /* height: 100%; */
+    display: grid;
+    grid-template-columns: repeat(2, 55%);
+    animation: fadeIn 2s;
+}
+
+main{
+    overflow-y: auto;
+}
+main section{
+    /*height: 100%;*/
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    animation: fadeIn 2s;
+}
+    main section h2{
+        grid-column: 1/3;
+        font-size: 2rem;
+        color: var(--mainColor);
+        font-family: Gilroy-Black;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+    main section h2{
+        margin-top: 0.3rem;
+    }
+    /*Each person*/
+    main section div.person{
+        /*height: 85%;*/
+        height: 10rem;
+        width: 80%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.3rem;
+    }
+        main section div.person img.avatar{
+            border-radius: 100%;
+            position: absolute;
+            height: 8rem;
+            width: 8rem;
+            z-index: 2;
+            box-shadow: 0px 0px 10px #00000029;
+            background-color: white;
+        }
+        main section div.person div.text{
+            
+            background-color: white;
+            box-shadow: 0px 0px 10px #00000029;
+            border-radius: 2rem;
+            padding: 3% 3% 3% 20%;
+            width: 70%;
+            height: 70%;
+            position: absolute;
+            left: 14%;
+            z-index: 1;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+            main section div.person div.text a{
+                text-transform: none;
+                text-decoration: none;
+                font-style: normal;
+                position: absolute;
+                right: 6%;
+            }
+                main section div.person div.text a i{
+                    font-size: 2rem;
+                    color: var(--menuColor);
+                    opacity: 0.3;
+                    cursor: pointer;
+                }
+                main section div.person div.text a:hover i{
+                    opacity: 1;
+                }
+            main section div.person div.text p.name{
+                color: var(--mainColor);
+                font-size: 2rem;
+                font-family: Gilroy-Black;
+            }
+            main section div.person div.text div.tag{
+                border-radius: 2rem;
+                display: flex;
+                padding: 0.5% 2.5% 0.5% 1%;
+                align-items: center;
+                /*width: fit-content;*/
+            }
+            main section div.person div.text div.tag.dev{
+                border: 1px solid var(--developerColor);
+                color: var(--developerColor);
+            }
+            main section div.person div.text div.tag.manage{
+                border: 1px solid var(--managementColor);
+                color: var(--managementColor);
+            }
+            main section div.person div.text div.tag.staff{
+                border: 1px solid var(--staffAdminColor);
+                color: var(--staffAdminColor);
+            }
+            main section div.person div.text div.tag.admin{
+                border: 1px solid var(--serverAdminColor);
+                color: var(--serverAdminColor);
+            }
+            main section div.person div.text div.tag.helper{
+                border: 1px solid var(--helperColor);
+                color: var(--helperColor);
+            }
+                main section div.person div.text div.tag div.circle{
+                    border-radius: 100%;
+                    height: 1.5rem;
+                    width: 1.5rem;;
+                    margin-right: 0.5rem;
+                
+                }
+                main section div.person div.text div.tag.dev div.circle{
+                    background-color: var(--developerColor);
+                }
+                main section div.person div.text div.tag.manage div.circle{
+                    background-color: var(--managementColor);
+                }
+                main section div.person div.text div.tag.staff div.circle{
+                    background-color: var(--staffAdminColor);
+                }
+                main section div.person div.text div.tag.admin div.circle{
+                    background-color: var(--serverAdminColor);
+                }
+                main section div.person div.text div.tag.helper div.circle{
+                    background-color: var(--helperColor);
+                }
+                main section div.person div.text div.tag p.tag-name{
+                    font-size: 0.8rem;
+                    font-family: Gilroy-Black;
+                    text-transform: uppercase;
+                    margin: 0px;
+                }
+
+
+@media screen and (max-width: 800px){
+    main > section{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+    main section div.person div.text{
+        left: 15%;
+        height: 40%;
+    }
+}
+@media screen and (max-width: 500px){
+    main section div.person{
+        margin-bottom: 1rem;
+    }
+    main section div.person div.text{
+        left: unset;
+    }
+    
+    main section div.person div.text{
+        left: 25%;
+        height: 40%;
+    }
+}
+
+@media screen and (max-width: 1200px){
+
+    main section div.person div.text{
+        left: 25%;
+        height: 40%;
+    }
+}
+
+ 
+
+.team-title h2 {
+  position: relative;
+  margin-bottom: 45px;
+  display: inline-block;
+  font-weight: 600;
+  line-height: 1;
+  margin-top: 3rem;
+}
+.team-title h2::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 60px;
+    height: 2px;
+    background: #939adf;
+    bottom: -25px;
+    margin-left: -30px;
+}
+.team-title p {
+  padding: 0 190px;
+  margin-bottom: 10px;
+}
